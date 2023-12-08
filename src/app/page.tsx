@@ -4,10 +4,7 @@ export default function Home() {
     <main className="flex min-h-screen items-center justify-center">
       <div flex="~ col" className="items-center">
         <h1 className="font-bold text-6xl font-mono">Next.js + UnoCSS ✨</h1>
-        <h3
-          m="t-3"
-          hover="text-[#0AC7B4]"
-        >
+        <h3 m="t-3" hover="text-[#0AC7B4]">
           @liaoyi
           <span
             className="group-hover:-translate-x-1 i-lucide:arrow-up-right"
@@ -18,8 +15,6 @@ export default function Home() {
           />
         </h3>
       </div>
-
-
     </main>
   )
 }
