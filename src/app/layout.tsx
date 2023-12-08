@@ -1,7 +1,8 @@
+import StyledComponentsRegistry from '@/components/ui/antd/AntdRegistry'
 import '@/styles/globals.css'
+import { GeistMono } from 'geist/font/mono'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -11,8 +12,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${GeistMono.variable}`}>
+      <body className={inter.className}>
+        <StyledComponentsRegistry>
+          <div className="w-full h-full">{children}</div>
+        </StyledComponentsRegistry>
+      </body>
     </html>
   )
 }

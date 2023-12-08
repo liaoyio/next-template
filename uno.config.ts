@@ -1,13 +1,8 @@
-import {
-  defineConfig,
-  presetUno,
-  presetAttributify,
-  presetIcons
-} from 'unocss'
+import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
 
+import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx'
 import transformerDirectives from '@unocss/transformer-directives'
 import transformerVariantGroup from '@unocss/transformer-variant-group'
-import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx'
 
 export default defineConfig({
   presets: [
@@ -15,12 +10,15 @@ export default defineConfig({
     presetAttributify({ strict: true }),
     presetIcons({
       autoInstall: true,
-      extraProperties: { 'display': 'inline-block', 'vertical-align': 'middle', },
-    }),
+      extraProperties: { display: 'inline-block', 'vertical-align': 'middle' }
+    })
   ],
-  transformers: [
-    transformerDirectives(),
-    transformerVariantGroup(),
-    transformerAttributifyJsx()
-  ],
+  transformers: [transformerDirectives(), transformerVariantGroup(), transformerAttributifyJsx()],
+  theme: {
+    extend: {
+      fontFamily: {
+        mono: ['var(--font-geist-mono)']
+      }
+    }
+  }
 })

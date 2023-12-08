@@ -1,10 +1,17 @@
-import * as React from 'react'
+import { AntdesignIcon, NextjsIcon } from '@/components/icon/logo'
+import { Button } from 'antd'
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
+    <main className="flex min-h-screen items-center justify-center pb-20">
       <div flex="~ col" className="items-center">
-        <h1 className="font-bold text-6xl font-mono">Next.js + UnoCSS ✨</h1>
-        <h3 m="t-3" hover="text-[#0AC7B4]">
+        <div flex="~" className="gap-3 pb-4">
+          <NextjsIcon className="w-9 h-9" />
+          <i className="text-4xl i-vscode-icons-file-type-unocss"></i>
+          <AntdesignIcon className="w-9 h-9" />
+        </div>
+        <h1 className="font-semibold text-3xl">Next.js + UnoCSS + Ant Design ✨</h1>
+        <a m="y-3" hover="text-[#0AC7B4]" href="https://github.com/liaoyio" target="_blank">
           @liaoyi
           <span
             className="group-hover:-translate-x-1 i-lucide:arrow-up-right"
@@ -13,7 +20,12 @@ export default function Home() {
             motion-reduce="transform-none"
             m="l-1"
           />
-        </h3>
+        </a>
+        <div className="gap-2 flex pt-2">
+          <Button>按钮</Button>
+          <Button type="primary">Button</Button>
+          <Button type="primary"> Create Next App </Button>
+        </div>
       </div>
     </main>
   )
