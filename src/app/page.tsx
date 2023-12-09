@@ -1,4 +1,4 @@
-import { AntdesignIcon, NextjsIcon } from '@/components/icon/logo'
+import { AntdesignIcon, NextjsIcon, UnocssIcon } from '@/components/icon/logo'
 import { Button } from 'antd'
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
       <div flex="~ col" className="items-center">
         <div flex="~" className="gap-3 pb-4">
           <NextjsIcon className="w-9 h-9" />
-          <i className="text-4xl i-vscode-icons-file-type-unocss"></i>
+          <UnocssIcon className="w-9 h-9" />
           <AntdesignIcon className="w-9 h-9" />
         </div>
         <h1 className="font-semibold text-3xl">Next.js + UnoCSS + Ant Design ✨</h1>
