@@ -1,13 +1,13 @@
 {
-  "extends": [ "next/core-web-vitals","plugin:prettier/recommended","prettier" ],
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended", "prettier"],
   "rules": {
-    "linebreak-style": ["error","unix"],
+    "linebreak-style": ["error", "unix"],
     // 单引号代替双引号,允许单引号内使用""和``
-    "quotes": [ "error","single",{"avoidEscape": true} ],
+    "quotes": ["error", "single", { "avoidEscape": true }],
     // 末尾不添加分号
-    "semi": [ "error", "never" ],
+    "semi": ["error", "never"],
     // 末尾不添加逗号
-    "comma-dangle": ["error","never"],
+    "comma-dangle": ["error", "never"],
     "prettier/prettier": "error"
   }
 }
