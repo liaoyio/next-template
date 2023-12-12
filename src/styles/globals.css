@@ -1,2 +1,74 @@
 @import "@unocss/reset/tailwind.css";
 @unocss all;
+
+:root{
+  --vp-c-brand: #44bd87;
+  --vp-c-brand-2: #249252;
+}
+
+.main {
+  @apply px-8 container mx-auto py-6;
+}
+
+.demo .link a {
+  color: #3da8f5;
+  text-decoration: none;
+  border-bottom: 1px solid #bedcff;
+  &:hover {
+    color: #007fff;
+    border-bottom-color: #007fff;
+  }
+}
+
+.demo .blog a {
+  padding:  8px 0;
+  color: #3da8f5;
+  &:hover {
+    color: #007fff;
+  }
+}
+
+.demo button {
+    padding: 3px 15px;
+    background-color: var(--vp-c-brand);
+    border: none;
+    outline: none;
+    color: #fff;
+    margin: .5rem 0;
+    border-bottom: 2px solid var(--vp-c-brand-2);
+    text-shadow: 1px 1px 1px var(--vp-c-brand-2);
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    vertical-align: middle
+}
+
+.demo button.small {
+    padding: .25em .7em .2em
+}
+
+
+.demo button:hover {
+    background-color: var(--vp-c-brand-2)
+}
+
+.demo button:active {
+    border-bottom: 0;
+    border-top: 2px solid var(--vp-c-brand-2)
+}
+
+.demo button~button {
+    margin-left: .5rem
+}
+
+.demo button[disabled],.demo button.disabled {
+    cursor: default;
+    background-color: rgba(125, 125, 125, .2);
+    color: var(--vp-c-disabled-fg);
+    border-bottom: 2px solid rgba(125, 125, 125, .2);
+    pointer-events: none;
+    text-shadow: none;
+    border-top: 0;
+    opacity: .8
+}
+
