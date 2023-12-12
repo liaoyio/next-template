@@ -16,13 +16,9 @@ export const metadata: Metadata = {
 
 type Props = {
   children: React.ReactNode
-  team: React.ReactNode
-  analytics: React.ReactNode
-  demo: React.ReactNode
-  auth: React.ReactNode
 }
 
-export default function RootLayout({ children, team, analytics, demo, auth }: Props) {
+export default function RootLayout({ children, auth }: Props) {
   return (
     <html lang="en" className={`${GeistMono.variable}`}>
       <body className={inter.className}>
@@ -30,27 +26,9 @@ export default function RootLayout({ children, team, analytics, demo, auth }: Pr
           <div className="w-full h-full">
             <div className="px-8 container mx-auto py-6 demo">
               <div className="flex justify-between items-center py-2 border-b border-dashed">
-                <h1 className="  text-14px font-500 ">
-                  Root Layout 🚀
-                  <span className="c-[#777] text-12px font-400 pl-3">
-                    测试平行路由（Parallel Routes） 🌊
-                  </span>
-                </h1>
-                <div className="pl-auto">
-                  <button>
-                    <Link href="/login">login</Link>
-                  </button>
-                </div>
+                <h1 className="  text-14px font-500 ">Root Layout 🚀</h1>
               </div>
-
-              <div className="py-6">
-                {children}
-                {team}
-                {analytics}
-                {demo}
-                {/* Login Modal */}
-                {auth}
-              </div>
+              <div className="py-6">{children}</div>
             </div>
           </div>
         </StyledComponentsRegistry>
